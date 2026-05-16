@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiverLi.DDD.Core", "RiverLi.DDD.Core.csproj", "{FCC95D59-A904-449B-BEB1-CCFB1ACA57AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCC95D59-A904-449B-BEB1-CCFB1ACA57AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCC95D59-A904-449B-BEB1-CCFB1ACA57AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCC95D59-A904-449B-BEB1-CCFB1ACA57AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCC95D59-A904-449B-BEB1-CCFB1ACA57AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {782604EF-6745-40FA-A6E8-5F21BE2C37A4}
+	EndGlobalSection
+EndGlobal

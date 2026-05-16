@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>12.0</LangVersion>
+    <!-- NuGet打包核心配置 -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>RiverLi.DDD.Core</PackageId>
+    <Version>1.0.8</Version>
+    <Authors>RiverLi</Authors>
+    <Description>RiverLi.Blog微服务集群通用DDD基础抽象包，包含领域层/应用层核心抽象、基础模型、仓储契约、领域事件，无业务、无第三方框架依赖，适配所有微服务</Description>
+    <!-- <PackageProjectUrl>https://your-project-url.com</PackageProjectUrl>
+    <RepositoryUrl>https://your-git-url.com</RepositoryUrl>-->
+    <Copyright>Copyright © 2026 RiverLi</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <AssemblyName>RiverLi.DDD.Core</AssemblyName>
+    <RootNamespace>RiverLi.DDD.Core</RootNamespace>
+    <!-- 排除非必要文件，减小包体积 -->
+    <ExcludeFilesFromPackage>**/bin/**;**/obj/**;**/.git/**;**/Properties/AssemblyInfo.cs</ExcludeFilesFromPackage>
+    <!-- 生成符号包，支持调试 -->
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <!-- 仅添加必要依赖：MediatR抽象包，标记为私有资产避免依赖传递 -->
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="14.0.0" />
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+  <!-- <ItemGroup>
+    <PackageReference Include="MediatR.Abstractions" Version="14.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup> -->
+
+  <!-- 整理项目文件目录结构，与实际文件夹对应 -->
+  <!-- <ItemGroup>
+    <Compile Include="Domain\Common\IEntity.cs" />
+    <Compile Include="Domain\Common\ISoftDelete.cs" />
+    <Compile Include="Domain\Common\IAggregateRoot.cs" />
+    <Compile Include="Domain\Common\BaseEntity.cs" />
+    <Compile Include="Domain\Events\IDomainEvent.cs" />
+    <Compile Include="Domain\Events\IDomainEventPublisher.cs" />
+    <Compile Include="Domain\Repositories\IReadOnlyRepository.cs" />
+    <Compile Include="Domain\Repositories\IRepository.cs" />
+    <Compile Include="Application\Common\Models\Result.cs" />
+    <Compile Include="Application\Common\Models\PagedQuery.cs" />
+    <Compile Include="Application\Common\Models\PagedResult.cs" />
+    <Compile Include="Application\Common\Behaviors\IValidationBehavior.cs" />
+  </ItemGroup> -->
+</Project>
